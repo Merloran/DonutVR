@@ -1,18 +1,18 @@
 {
   "context": {
-    "projectPath": "E:/Unity/Projects/DonutGame/Packages",
+    "projectPath": "D:/Prace domowe/Rok_4/Semestr_II/VR/DonutVR/DonutGame/Packages",
     "unityVersion": "6000.0.43f1"
   },
   "inputs": [
-    "E:\\Unity\\Projects\\DonutGame\\Packages\\manifest.json",
-    "E:\\Unity\\Projects\\DonutGame\\Packages\\packages-lock.json",
+    "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Packages\\manifest.json",
+    "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Packages\\packages-lock.json",
     "E:\\Unity\\Editor\\6000.0.43f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.collab-proxy@2.7.1": {
       "name": "com.unity.collab-proxy",
       "displayName": "Version Control",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.collab-proxy@50ac96531b63",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.collab-proxy@50ac96531b63",
       "fingerprint": "50ac96531b6358586ccfdf8cc845939bf50d9fab",
       "editorCompatibility": "2021.3.0f1",
       "version": "2.7.1",
@@ -22,7 +22,7 @@
     "com.unity.feature.development@1.0.2": {
       "name": "com.unity.feature.development",
       "displayName": "Engineering",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.feature.development@767aadbc6eb7",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.feature.development@767aadbc6eb7",
       "fingerprint": "767aadbc6eb72681a4ca807c8fa248e0230a0cef",
       "version": "1.0.2",
       "source": "builtin",
@@ -31,7 +31,7 @@
     "com.unity.inputsystem@1.13.1": {
       "name": "com.unity.inputsystem",
       "displayName": "Input System",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.inputsystem@e2c83221d2dc",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.inputsystem@e2c83221d2dc",
       "fingerprint": "e2c83221d2dc3fc990b017cbd3f9d0742649c8a8",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.13.1",
@@ -41,7 +41,7 @@
     "com.unity.learn.iet-framework@4.0.4": {
       "name": "com.unity.learn.iet-framework",
       "displayName": "Tutorial Framework",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.learn.iet-framework@104e397c56f7",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.learn.iet-framework@104e397c56f7",
       "fingerprint": "104e397c56f7e54a6b20dd4ed443ecc9e65a9472",
       "editorCompatibility": "2021.3.0a1",
       "version": "4.0.4",
@@ -51,7 +51,7 @@
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
       "fingerprint": "f3fb577b3546594b97b8cc34307cd621f60f1c73",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.0",
@@ -61,7 +61,7 @@
     "com.unity.render-pipelines.universal@17.0.4": {
       "name": "com.unity.render-pipelines.universal",
       "displayName": "Universal RP",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.render-pipelines.universal@d680fce5716f",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.render-pipelines.universal@d680fce5716f",
       "fingerprint": "d680fce5716f8369152b159aee341ae849eb8ff5",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.4",
@@ -71,7 +71,7 @@
     "com.unity.timeline@1.8.7": {
       "name": "com.unity.timeline",
       "displayName": "Timeline",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.timeline@c58b4ee65782",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.timeline@c58b4ee65782",
       "fingerprint": "c58b4ee65782ad38338e29f7ee67787cb6998f04",
       "editorCompatibility": "2019.3.0a1",
       "version": "1.8.7",
@@ -81,7 +81,7 @@
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
       "displayName": "Unity UI",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.ugui@c82f62fefab3",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.ugui@c82f62fefab3",
       "fingerprint": "c82f62fefab33ce05e397f56634776192888900b",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",
@@ -91,7 +91,7 @@
     "com.unity.xr.hands@1.5.0": {
       "name": "com.unity.xr.hands",
       "displayName": "XR Hands",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.xr.hands@b137b9cef9d8",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.xr.hands@b137b9cef9d8",
       "fingerprint": "b137b9cef9d8ac6f2f21023d4def8cc316ae4dbc",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.5.0",
@@ -101,7 +101,7 @@
     "com.unity.xr.interaction.toolkit@3.0.7": {
       "name": "com.unity.xr.interaction.toolkit",
       "displayName": "XR Interaction Toolkit",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@3c62ab08b942",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@3c62ab08b942",
       "fingerprint": "3c62ab08b942ff4b2fcf3c67d9ec9b00da5079fa",
       "editorCompatibility": "2021.3.0a1",
       "version": "3.0.7",
@@ -111,7 +111,7 @@
     "com.unity.xr.management@4.5.0": {
       "name": "com.unity.xr.management",
       "displayName": "XR Plugin Management",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.xr.management@3126858600e6",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.xr.management@3126858600e6",
       "fingerprint": "3126858600e621b17ff9bfda920ebf34b9f2414c",
       "editorCompatibility": "2020.3.15f1",
       "version": "4.5.0",
@@ -121,7 +121,7 @@
     "com.unity.xr.oculus@4.5.1": {
       "name": "com.unity.xr.oculus",
       "displayName": "Oculus XR Plugin",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.xr.oculus@f23ad2c521e1",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.xr.oculus@f23ad2c521e1",
       "fingerprint": "f23ad2c521e15c5bf931562999bf3e9268208212",
       "editorCompatibility": "2022.3.1f1",
       "version": "4.5.1",
@@ -131,7 +131,7 @@
     "com.unity.xr.openxr@1.14.0": {
       "name": "com.unity.xr.openxr",
       "displayName": "OpenXR Plugin",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.xr.openxr@97381c723a9c",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.xr.openxr@97381c723a9c",
       "fingerprint": "97381c723a9c4a7b56925c2aa4e742b3348f7eac",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.14.0",
@@ -413,7 +413,7 @@
     "com.unity.xr.core-utils@2.5.1": {
       "name": "com.unity.xr.core-utils",
       "displayName": "XR Core Utilities",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.xr.core-utils@c0df0dd5bced",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.xr.core-utils@c0df0dd5bced",
       "fingerprint": "c0df0dd5bced783e855e63d640484ff72ea7dea8",
       "editorCompatibility": "2021.3.0f1",
       "version": "2.5.1",
@@ -423,7 +423,7 @@
     "com.unity.xr.legacyinputhelpers@2.1.12": {
       "name": "com.unity.xr.legacyinputhelpers",
       "displayName": "XR Legacy Input Helpers",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.xr.legacyinputhelpers@b7579e86f3b4",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.xr.legacyinputhelpers@b7579e86f3b4",
       "fingerprint": "b7579e86f3b456c909fda6b875fba7ab1eeb1322",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.1.12",
@@ -433,7 +433,7 @@
     "com.unity.mathematics@1.3.2": {
       "name": "com.unity.mathematics",
       "displayName": "Mathematics",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.mathematics@8017b507cc74",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.mathematics@8017b507cc74",
       "fingerprint": "8017b507cc74bf0a1dd14b18aa860569f807314d",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.3.2",
@@ -443,7 +443,7 @@
     "com.unity.render-pipelines.core@17.0.4": {
       "name": "com.unity.render-pipelines.core",
       "displayName": "Core RP Library",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.render-pipelines.core@2c53672ff4c2",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.render-pipelines.core@2c53672ff4c2",
       "fingerprint": "2c53672ff4c2bffa4a62150120fc5a6937be4b8f",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.4",
@@ -453,7 +453,7 @@
     "com.unity.shadergraph@17.0.4": {
       "name": "com.unity.shadergraph",
       "displayName": "Shader Graph",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.shadergraph@0e6324a629e1",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.shadergraph@0e6324a629e1",
       "fingerprint": "0e6324a629e1e71e84251c105d902b9ba41196b0",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.4",
@@ -463,7 +463,7 @@
     "com.unity.render-pipelines.universal-config@17.0.3": {
       "name": "com.unity.render-pipelines.universal-config",
       "displayName": "Universal RP Config",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.render-pipelines.universal-config@fa63c96d3e1a",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.render-pipelines.universal-config@fa63c96d3e1a",
       "fingerprint": "fa63c96d3e1af317d84d171cd6c0e0658ab159df",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.3",
@@ -473,7 +473,7 @@
     "com.unity.editorcoroutines@1.0.0": {
       "name": "com.unity.editorcoroutines",
       "displayName": "Editor Coroutines",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.editorcoroutines@7d48783e7b8c",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.editorcoroutines@7d48783e7b8c",
       "fingerprint": "7d48783e7b8cfcee5f8ef9ba787ed0d9dad4ebca",
       "editorCompatibility": "2018.1.0a1",
       "version": "1.0.0",
@@ -483,7 +483,7 @@
     "com.unity.settings-manager@2.0.1": {
       "name": "com.unity.settings-manager",
       "displayName": "Settings Manager",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.settings-manager@56a930affa1e",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.settings-manager@56a930affa1e",
       "fingerprint": "56a930affa1e4462d3595b5c19a1c2a4bf2015d2",
       "editorCompatibility": "2018.4.0a1",
       "version": "2.0.1",
@@ -493,7 +493,7 @@
     "com.unity.ide.visualstudio@2.0.22": {
       "name": "com.unity.ide.visualstudio",
       "displayName": "Visual Studio Editor",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.ide.visualstudio@8140e851d83e",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.ide.visualstudio@8140e851d83e",
       "fingerprint": "8140e851d83e922ca2021b04a89519de94ebe38c",
       "editorCompatibility": "2019.4.25f1",
       "version": "2.0.22",
@@ -503,7 +503,7 @@
     "com.unity.ide.rider@3.0.31": {
       "name": "com.unity.ide.rider",
       "displayName": "JetBrains Rider Editor",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.ide.rider@7921be93db40",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.ide.rider@7921be93db40",
       "fingerprint": "7921be93db40ec070fcb01ed82d1c3df1bbdddcd",
       "editorCompatibility": "2019.2.6f1",
       "version": "3.0.31",
@@ -513,7 +513,7 @@
     "com.unity.performance.profile-analyzer@1.2.3": {
       "name": "com.unity.performance.profile-analyzer",
       "displayName": "Profile Analyzer",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.performance.profile-analyzer@a68e7bc84997",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.performance.profile-analyzer@a68e7bc84997",
       "fingerprint": "a68e7bc849973d943853204178d08a2bc7656ffe",
       "editorCompatibility": "2020.3.0a1",
       "version": "1.2.3",
@@ -523,7 +523,7 @@
     "com.unity.test-framework@1.4.6": {
       "name": "com.unity.test-framework",
       "displayName": "Test Framework",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.test-framework@5ac417e07314",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.test-framework@5ac417e07314",
       "fingerprint": "5ac417e07314c8f6afba8109738c32b82d391e68",
       "editorCompatibility": "2019.4.1f1",
       "version": "1.4.6",
@@ -533,7 +533,7 @@
     "com.unity.testtools.codecoverage@1.2.6": {
       "name": "com.unity.testtools.codecoverage",
       "displayName": "Code Coverage",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.testtools.codecoverage@205a02cbcb39",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.testtools.codecoverage@205a02cbcb39",
       "fingerprint": "205a02cbcb39584f20b51c49b853047aceb3a3a7",
       "editorCompatibility": "2019.3.0a1",
       "version": "1.2.6",
@@ -543,7 +543,7 @@
     "com.unity.searcher@4.9.3": {
       "name": "com.unity.searcher",
       "displayName": "Searcher",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.searcher@1e17ce91558d",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.searcher@1e17ce91558d",
       "fingerprint": "1e17ce91558d1d9127554adc03d275f39a7466a2",
       "editorCompatibility": "2019.1.0a1",
       "version": "4.9.3",
@@ -553,7 +553,7 @@
     "com.unity.burst@1.8.19": {
       "name": "com.unity.burst",
       "displayName": "Burst",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.burst@7a907cf5a459",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.burst@7a907cf5a459",
       "fingerprint": "7a907cf5a4591e4e25f4203e3be84f240058c34d",
       "editorCompatibility": "2020.3.0a1",
       "version": "1.8.19",
@@ -563,7 +563,7 @@
     "com.unity.collections@2.5.1": {
       "name": "com.unity.collections",
       "displayName": "Collections",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.collections@56bff8827a7e",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.collections@56bff8827a7e",
       "fingerprint": "56bff8827a7ef6d44fcee4f36e558a74da89c1a0",
       "editorCompatibility": "2022.3.11f1",
       "version": "2.5.1",
@@ -573,7 +573,7 @@
     "com.unity.rendering.light-transport@1.0.1": {
       "name": "com.unity.rendering.light-transport",
       "displayName": "Unity Light Transport Library",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.rendering.light-transport@307bc27a498f",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.rendering.light-transport@307bc27a498f",
       "fingerprint": "307bc27a498fc9cd409bbd426c85d8dc7f140bc1",
       "editorCompatibility": "2023.3.0b1",
       "version": "1.0.1",
@@ -583,7 +583,7 @@
     "com.unity.ext.nunit@2.0.5": {
       "name": "com.unity.ext.nunit",
       "displayName": "Custom NUnit",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.ext.nunit@60ef35ffd3cd",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.ext.nunit@60ef35ffd3cd",
       "fingerprint": "60ef35ffd3cd5e2f5c8887a4a4ca6148854cd092",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.5",
@@ -593,7 +593,7 @@
     "com.unity.nuget.mono-cecil@1.11.4": {
       "name": "com.unity.nuget.mono-cecil",
       "displayName": "Mono Cecil",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.nuget.mono-cecil@d6f9955a5d5f",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.nuget.mono-cecil@d6f9955a5d5f",
       "fingerprint": "d6f9955a5d5f84d45442ff1ad0fb694cc6e2fd62",
       "editorCompatibility": "2018.4.0a1",
       "version": "1.11.4",
@@ -603,7 +603,7 @@
     "com.unity.test-framework.performance@3.0.3": {
       "name": "com.unity.test-framework.performance",
       "displayName": "Performance testing API",
-      "resolvedPath": "E:\\Unity\\Projects\\DonutGame\\Library\\PackageCache\\com.unity.test-framework.performance@fb0dc592af8b",
+      "resolvedPath": "D:\\Prace domowe\\Rok_4\\Semestr_II\\VR\\DonutVR\\DonutGame\\Library\\PackageCache\\com.unity.test-framework.performance@fb0dc592af8b",
       "fingerprint": "fb0dc592af8b524f1a06c50d7caf95552f1bcd2f",
       "editorCompatibility": "2020.3.0a1",
       "version": "3.0.3",
