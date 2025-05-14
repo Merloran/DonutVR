@@ -22,7 +22,7 @@ public class PickManager : MonoBehaviour
         var pick = other.GetComponent<Pick>();
         if (pick)
         {
-            var foods = GetComponentsInChildren<FoodItem>();
+            var foods = other.GetComponentsInChildren<FoodItem>();
             int score = 0;
             foreach (var food in foods)
             {
