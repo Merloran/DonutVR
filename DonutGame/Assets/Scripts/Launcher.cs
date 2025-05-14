@@ -28,11 +28,10 @@ public class Launcher : MonoBehaviour
         for (; ; )
         {
             var spawner = Spawners[Random.Range(0, Spawners.Count)];
-
-            var fruit = Instantiate(FoodItems[0], spawner.transform);
+            var fruitPrefab = FoodItems[Random.Range(0, Spawners.Count)];
+            var fruit = Instantiate(fruitPrefab, spawner.transform);
             fruit.GetComponent<Rigidbody>().AddForce((spawner.transform.forward + spawner.transform.up).normalized * Strength, ForceMode.Impulse);
             yield return new WaitForSeconds(5.0f);
-            //Destroy(fruit);
         }
     }
 }
