@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Launcher : MonoBehaviour
 {
+    public float cooldown = 2f;
     [SerializeField]
     public List<GameObject> FoodItems;
 
@@ -31,7 +32,7 @@ public class Launcher : MonoBehaviour
             var fruitPrefab = FoodItems[Random.Range(0, Spawners.Count)];
             var fruit = Instantiate(fruitPrefab, spawner.transform);
             fruit.GetComponent<Rigidbody>().AddForce((spawner.transform.forward + spawner.transform.up).normalized * Strength, ForceMode.Impulse);
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(cooldown);
         }
     }
 }

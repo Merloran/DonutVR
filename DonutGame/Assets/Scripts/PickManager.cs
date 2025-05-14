@@ -4,6 +4,7 @@ public class PickManager : MonoBehaviour
 {
     public GameObject pickSpawnPoint;
     public GameObject pickPrefab;
+    public int finalScore = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +30,7 @@ public class PickManager : MonoBehaviour
                 score += food.points;
             }
             Debug.Log(score);
+            finalScore += score;
             Destroy(pick.transform.parent.gameObject);
             Instantiate(pickPrefab, pickSpawnPoint.transform);
         }
