@@ -3,6 +3,7 @@ using UnityEngine;
 public class PickManager : MonoBehaviour
 {
     public GameObject pickSpawnPoint;
+    public GameObject pickPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,11 +19,11 @@ public class PickManager : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
-        var FoodItem = other.GetComponent<FoodItem>();
-        if (FoodItem)
+        var pick = other.GetComponent<Pick>();
+        if (pick)
         {
-
-
+            Destroy(pick.transform.parent.gameObject);
+            Instantiate(pickPrefab, pickSpawnPoint.transform);
         }
 
     }

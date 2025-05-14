@@ -17,8 +17,8 @@ public class Pick : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
-        var FoodItem = other.GetComponent<FoodItem>();
-        if (FoodItem)
+        var foodItem = other.GetComponent<FoodItem>();
+        if (foodItem)
         {
             if (itemNumber >= 4)
             {
@@ -27,8 +27,9 @@ public class Pick : MonoBehaviour
             other.GetComponent<SphereCollider>().enabled = false;
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 0.8f + (0.2f * itemNumber), this.transform.position.z);
-            itemNumber++;
+            foodItem.toDestroy = false;
             other.transform.SetParent(this.transform);
+            itemNumber++;
 
         }
 
