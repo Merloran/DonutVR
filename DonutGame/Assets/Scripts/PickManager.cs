@@ -14,4 +14,16 @@ public class PickManager : MonoBehaviour
     {
 
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.name);
+        var FoodItem = other.GetComponent<FoodItem>();
+        if (FoodItem)
+        {
+
+
+        }
+
+    }
 }
