@@ -1,9 +1,12 @@
+using TMPro;
 using UnityEngine;
 
 public class PickManager : MonoBehaviour
 {
     public GameObject pickSpawnPoint;
     public GameObject pickPrefab;
+
+    public GameObject text;
     public int finalScore = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +34,7 @@ public class PickManager : MonoBehaviour
             }
             Debug.Log(score);
             finalScore += score;
+            text.GetComponent<TextMeshProUGUI>().SetText(finalScore.ToString());
             Destroy(pick.transform.parent.gameObject);
             Instantiate(pickPrefab, pickSpawnPoint.transform);
         }
