@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class FoodItem : MonoBehaviour
+public class PickManager : MonoBehaviour
 {
-    public int points = 0;
-    public float lifeTime = 5f;
+    public GameObject pickSpawnPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
