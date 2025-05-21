@@ -1,10 +1,19 @@
 using UnityEngine;
 
+public enum Food
+{
+    tomato,
+    steak,
+    junk
+};
+
 public class FoodItem : MonoBehaviour
 {
     public int points = 0;
     public float lifeTime = 5f;
     public bool toDestroy = true;
+
+    public Food type;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
