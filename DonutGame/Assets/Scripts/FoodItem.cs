@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public enum Food
 {
@@ -23,14 +24,15 @@ public class FoodItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (toDestroy)
+        if (toDestroy == false || gameObject.GetComponent<XRGrabInteractable>().isSelected)
         {
-            lifeTime -= Time.deltaTime;
-            if (lifeTime <= 0)
-            {
-                Destroy(this);
-            }
+            return;
         }
 
+        lifeTime -= Time.deltaTime;
+        if (lifeTime <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
