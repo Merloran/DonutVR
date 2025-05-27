@@ -26,10 +26,10 @@ public class Launcher : MonoBehaviour
 
     private IEnumerator LaunchFruit()
     {
-        for (; ; )
+        while (true)
         {
             var spawner = Spawners[Random.Range(0, Spawners.Count)];
-            var fruitPrefab = FoodItems[Random.Range(0, Spawners.Count)];
+            var fruitPrefab = FoodItems[Random.Range(0, FoodItems.Count)];
             var fruit = Instantiate(fruitPrefab, spawner.transform);
             fruit.GetComponent<Rigidbody>().AddForce((spawner.transform.forward + spawner.transform.up).normalized * Strength, ForceMode.Impulse);
             yield return new WaitForSeconds(cooldown);

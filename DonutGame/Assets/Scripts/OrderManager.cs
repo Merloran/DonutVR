@@ -10,12 +10,12 @@ public struct Order
     public List<Food> foods;
     public float time;
 
-    public Order(float time)
+    public Order(float time, int itemsCount)
     {
         foods = new List<Food>();
         this.time = time;
         int foodCount = System.Enum.GetValues(typeof(Food)).Length;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < itemsCount; i++)
         {
             foods.Add((Food)Random.Range(0, foodCount - 1));
         }
@@ -24,16 +24,18 @@ public struct Order
 };
 public class OrderManager : MonoBehaviour
 {
+    [SerializeField]
+    private int requiredItems = 6;
     public GameObject pickSpawnPoint;
     public GameObject pickPrefab;
     public GameObject text;
     public int finalScore = 0;
 
-    List<Order> currentOrders = new List<Order>();
+    List<Order> currentOrders = new();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Order testOrder = new Order(10f);
+        Order testOrder = new Order(10f, requiredItems);
 
         currentOrders.Add(testOrder);
 
@@ -62,38 +64,41 @@ public class OrderManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-        var pick = other.GetComponent<Pick>();
-        if (pick)
+        var pick = other.GetComponentInChildren<Pick>();
+        if (!pick)
         {
-            var foodsOnPick = other.GetComponentsInChildren<FoodItem>();
-            //assuming all orders should have 4 elements
-            if (foodsOnPick.Count() != 4)
-                return;
-            foreach (var order in currentOrders)
+            return;
+        }
+
+        var foodsOnPick = other.GetComponentsInChildren<FoodItem>();
+        if (foodsOnPick.Count() != pick.maxSlotsCount)
+        {
+            return;
+        }
+
+        foreach (var order in currentOrders)
+        {
+            bool correct = true;
+            for (int i = 0; i < order.foods.Count; i++)
             {
-                bool correct = true;
-                for (int i = 0; i < order.foods.Count; i++)
+                if (order.foods[i] != foodsOnPick[i].type)
                 {
-                    if (order.foods[i] != foodsOnPick[i].type)
-                    {
-                        correct = false;
-                    }
+                    correct = false;
                 }
-                if (correct == true)
+            }
+            if (correct == true)
+            {
+                int score = 0;
+                foreach (var food in foodsOnPick)
                 {
-                    int score = 0;
-                    foreach (var food in foodsOnPick)
-                    {
-                        score += food.points;
-                    }
-                    Debug.Log(score);
-                    finalScore += score;
-                    text.GetComponent<TextMeshProUGUI>().SetText(finalScore.ToString());
-                    Destroy(pick.transform.parent.gameObject);
-                    Instantiate(pickPrefab, pickSpawnPoint.transform);
-                    return;
+                    score += food.points;
                 }
+                Debug.Log(score);
+                finalScore += score;
+                text.GetComponent<TextMeshProUGUI>().SetText(finalScore.ToString());
+                Destroy(pick.transform.parent.gameObject);
+                Instantiate(pickPrefab, pickSpawnPoint.transform);
+                return;
             }
         }
     }
