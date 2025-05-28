@@ -26,40 +26,39 @@ public class OrderManager : MonoBehaviour
 {
     [SerializeField]
     private int requiredItems = 6;
-    public GameObject pickSpawnPoint;
-    public GameObject pickPrefab;
-    public GameObject text;
-    public int finalScore = 0;
+    [SerializeField]
+    private float minTime = 20.0f;
+    [SerializeField]
+    private float maxTime = 60.0f;
 
-    List<Order> currentOrders = new();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField]
+    public GameObject pickSpawnPoint;
+    [SerializeField]
+    public GameObject pickPrefab;
+    [SerializeField]
+    public GameObject orderText;
+    [SerializeField]
+    public GameObject timerText;
+    [SerializeField]
+    public GameObject scoreText;
+    public int finalScore = 0;
+    private Order currentOrder;
+
     void Start()
     {
-        Order testOrder = new Order(10f, requiredItems);
-
-        currentOrders.Add(testOrder);
-
-        foreach (var order in testOrder.foods)
-        {
-            Debug.Log(order);
-        }
+        currentOrder = new Order(maxTime, requiredItems);
+        UpdateOrderText();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < currentOrders.Count; i++)
+        currentOrder.time -= Time.deltaTime;
+        UpdateTimeText();
+        if (currentOrder.time <= 0f)
         {
-            var order = currentOrders[i];
-            order.time -= Time.deltaTime;
-            currentOrders[i] = order;
-            //manage expiring orders
-            if (currentOrders[0].time <= 0f)
-            {
-            }
+            currentOrder = new Order(Random.Range(minTime, maxTime), requiredItems);
+            UpdateOrderText();
         }
-
-
     }
 
     void OnTriggerEnter(Collider other)
@@ -70,36 +69,56 @@ public class OrderManager : MonoBehaviour
             return;
         }
 
-        var foodsOnPick = other.GetComponentsInChildren<FoodItem>();
+        FoodItem[] foodsOnPick = other.GetComponentsInChildren<FoodItem>();
         if (foodsOnPick.Count() != pick.maxSlotsCount)
         {
             return;
         }
 
-        foreach (var order in currentOrders)
+        int score = currentOrder.foods.Count;
+        for (int i = 0; i < currentOrder.foods.Count; ++i)
         {
-            bool correct = true;
-            for (int i = 0; i < order.foods.Count; i++)
+            if (currentOrder.foods[i] != foodsOnPick[i].type)
             {
-                if (order.foods[i] != foodsOnPick[i].type)
-                {
-                    correct = false;
-                }
+                score--;
             }
-            if (correct == true)
+
+            if (foodsOnPick[i].type == Food.junk)
             {
-                int score = 0;
-                foreach (var food in foodsOnPick)
-                {
-                    score += food.points;
-                }
-                Debug.Log(score);
-                finalScore += score;
-                text.GetComponent<TextMeshProUGUI>().SetText(finalScore.ToString());
-                Destroy(pick.transform.parent.gameObject);
-                Instantiate(pickPrefab, pickSpawnPoint.transform);
-                return;
+                score--;
             }
         }
+
+        currentOrder = new Order(Random.Range(minTime, maxTime), requiredItems);
+        UpdateOrderText();
+        finalScore += score;
+        Destroy(pick.transform.parent.gameObject);
+        UpdateScoreText();
+        Instantiate(pickPrefab, pickSpawnPoint.transform);
+    }
+
+    void UpdateOrderText()
+    {
+        var text = orderText.GetComponent<TextMeshProUGUI>();
+
+        string content = "Order\n";
+        currentOrder.foods.Reverse();
+        foreach (var food in currentOrder.foods)
+        {
+            content += "<sprite=" + (int)food + ">\n";
+        }
+        currentOrder.foods.Reverse();
+        text.SetText(content);
+    }
+    void UpdateTimeText()
+    {
+        var text = timerText.GetComponent<TextMeshProUGUI>();
+        text.SetText(((int)currentOrder.time).ToString());
+    }
+
+    void UpdateScoreText()
+    {
+        var text = scoreText.GetComponent<TextMeshProUGUI>();
+        text.SetText(finalScore.ToString());
     }
 }

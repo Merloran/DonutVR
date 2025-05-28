@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1260db2a54f37134a842801e0ac4e951
+guid: 1720f9f6294b4e245b66612175b27d4c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -136,23 +136,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tomato_icon_0
+      name: FoodAtlas_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 512
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29353811e051f1f45b9d5cba457ccfb1
-      internalID: -119256839
+      spriteID: c0bea52012c5ba4499b23539a1a62e97
+      internalID: 1171905946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FoodAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880b64a41e39c4b489335f01d55fce0f
+      internalID: 1146493780
       vertices: []
       indices: 
       edges: []
@@ -171,7 +193,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tomato_icon_0: -119256839
+      FoodAtlas_0: 1171905946
+      FoodAtlas_1: 1146493780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotsOffset: 0.2
-  maxSlotsCount: 4
+  maxSlotsCount: 5
 --- !u!1001 &5563612609997539677
 PrefabInstance:
   m_ObjectHideFlags: 0

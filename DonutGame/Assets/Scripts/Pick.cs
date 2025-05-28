@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -13,10 +10,12 @@ public class Pick : MonoBehaviour
     {
         public float impalingProgress;
         public float currentImpalingSpeed;
+        public float baseImpalingSpeed;
         public GameObject food;
         public FoodInfo(float progress, float speed, GameObject food)
         {
             impalingProgress = progress;
+            baseImpalingSpeed = speed;
             currentImpalingSpeed = speed;
             this.food = food;
         }
@@ -38,6 +37,7 @@ public class Pick : MonoBehaviour
 
     void Update()
     {
+        UpdateImpalingSpeed();
         if (foodSlots.size < maxSlotsCount || foodSlots[maxSlotsCount - 1].impalingProgress < 1.0f)
         {
             for (int i = 0; i < foodSlots.size; ++i)
@@ -63,17 +63,63 @@ public class Pick : MonoBehaviour
         Debug.Log(other.name);
         var foodItem = other.GetComponent<FoodItem>();
         var grab = other.GetComponent<XRGrabInteractable>();
-        if (foodItem == null || grab.isSelected || foodSlots.size >= maxSlotsCount)
+        if (foodItem == null || 
+            grab.isSelected || 
+            foodSlots.size >= maxSlotsCount ||
+            (foodSlots.size > 0 && foodSlots[foodSlots.size - 1].impalingProgress <= 0.0f))
         {
             return;
         }
         other.GetComponent<SphereCollider>().enabled = false;
         var rb = other.GetComponent<Rigidbody>();
-        // float speed = CalculateEffectiveSpeed(rb.linearVelocity);
+        float initialSpeed = CalculateInitialImpalingSpeed(rb.linearVelocity);
         rb.isKinematic = true;
         foodItem.toDestroy = false;
         other.transform.SetParent(transform);
-        foodSlots.Add(new FoodInfo(0.0f, 1.0f, other.gameObject));
+        foodSlots.Add(new FoodInfo(0.0f, initialSpeed, other.gameObject));
     }
 
+    private float CalculateInitialImpalingSpeed(Vector3 velocity)
+    {
+        float speedAlongAxis = Vector3.Dot(velocity, -transform.up);
+        speedAlongAxis = Mathf.Max(0f, speedAlongAxis);
+        float normalizedSpeed = Mathf.Lerp(0.2f, 3.0f, Mathf.InverseLerp(0f, 5f, speedAlongAxis));
+
+        return Mathf.Clamp(normalizedSpeed, 0.2f, 3.0f);
+    }
+
+
+    private void UpdateImpalingSpeed()
+    {
+        for (int i = 0; i < foodSlots.size; ++i)
+        {
+            if (foodSlots[i].impalingProgress >= 1.0f)
+            {
+                continue;
+            }
+
+            var currentFood = foodSlots[i];
+            float slowdownMultiplier = CalculateSlowdownMultiplier(i);
+            float angle = Vector3.Angle(transform.up, Vector3.up);
+            currentFood.currentImpalingSpeed = currentFood.baseImpalingSpeed * slowdownMultiplier * (angle <= 45f ? 1.0f : 0.0f);
+
+            foodSlots[i] = currentFood;
+        }
+    }
+
+    private float CalculateSlowdownMultiplier(int currentIndex)
+    {
+        float multiplier = 1.0f;
+
+        for (int i = currentIndex + 1; i < foodSlots.size; ++i)
+        {
+            if (foodSlots[i].impalingProgress < 1.0f)
+            {
+                float elementInfluence = 1.0f - foodSlots[i].impalingProgress;
+                multiplier *= Mathf.Lerp(1.0f, 0.7f, elementInfluence);
+            }
+        }
+
+        return Mathf.Clamp(multiplier, 0.1f, 1.0f);
+    }
 }
