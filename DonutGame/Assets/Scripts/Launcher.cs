@@ -27,8 +27,6 @@ public class Launcher : MonoBehaviour
     {
         verticalConstraint = verticalConstraintAngle / 180.0f;
         horizontalConstraint = horizontalConstraintAngle / 180.0f;
-        Debug.Log(verticalConstraint);
-        Debug.Log(horizontalConstraint);
         StartCoroutine("LaunchFruit");
     }
 
@@ -43,12 +41,12 @@ public class Launcher : MonoBehaviour
         {
             var spawner = spawners[Random.Range(0, spawners.Count)];
             var fruitPrefab = foodItems[Random.Range(0, foodItems.Count)];
-            var fruit = Instantiate(fruitPrefab, spawner.transform);
+            var fruit = Instantiate(fruitPrefab, spawner.transform.position, spawner.transform.rotation);
 
             Vector3 randomOffset = spawner.transform.right * Random.Range(-verticalConstraint, verticalConstraint)
                                  + spawner.transform.up * Random.Range(-horizontalConstraint, horizontalConstraint);
 
-            Vector3 direction = (spawner.transform.forward + spawner.transform.up + randomOffset).normalized;
+            Vector3 direction = (spawner.transform.forward + Vector3.up + randomOffset).normalized;
 
             fruit.GetComponent<Rigidbody>().AddForce(direction * Strength, ForceMode.Impulse);
             yield return new WaitForSeconds(cooldown);
