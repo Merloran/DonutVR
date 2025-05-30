@@ -1751,8 +1751,8 @@ MonoBehaviour:
   - {fileID: 1988662495}
   - {fileID: 2133606452}
   Strength: 10
-  verticalConstraintAngle: 0
-  horizontalConstraintAngle: 0
+  verticalConstraintAngle: 30
+  horizontalConstraintAngle: 40
 --- !u!1 &1347410544
 GameObject:
   m_ObjectHideFlags: 0
