@@ -63,10 +63,12 @@ public class Pick : MonoBehaviour
         Debug.Log(other.name);
         var foodItem = other.GetComponent<FoodItem>();
         var grab = other.GetComponent<XRGrabInteractable>();
-        if (foodItem == null || 
-            grab.isSelected || 
+        float angle = Vector3.Angle(transform.up, Vector3.up);
+        if (foodItem == null ||
+            grab.isSelected ||
             foodSlots.size >= maxSlotsCount ||
-            (foodSlots.size > 0 && foodSlots[foodSlots.size - 1].impalingProgress <= 0.0f))
+            (foodSlots.size > 0 && foodSlots[foodSlots.size - 1].impalingProgress <= 0.2f) ||
+            angle > 90.0f)
         {
             return;
         }
