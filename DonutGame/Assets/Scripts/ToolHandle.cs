@@ -18,9 +18,9 @@ public class ToolHandle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Tool tool = other.gameObject.GetComponent<Tool>();
-        Rigidbody body = other.gameObject.GetComponent<Rigidbody>();
-        XRGrabInteractable grab = other.gameObject.GetComponent<XRGrabInteractable>();
+        Tool tool = other.gameObject.GetComponentInParent<Tool>();
+        Rigidbody body = other.gameObject.GetComponentInParent<Rigidbody>();
+        XRGrabInteractable grab = other.gameObject.GetComponentInParent<XRGrabInteractable>();
         if (isOccupied || !tool || !body || !grab || grab.isSelected)
         {
             return;
