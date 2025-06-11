@@ -41,7 +41,6 @@ public class OrderManager : MonoBehaviour
     public GameObject timerText;
     [SerializeField]
     public GameObject scoreText;
-    public int finalScore = 0;
     private Order currentOrder;
 
     void Start()
@@ -58,6 +57,7 @@ public class OrderManager : MonoBehaviour
         {
             currentOrder = new Order(Random.Range(minTime, maxTime), requiredItems);
             UpdateOrderText();
+            UpdateScoreText(-10.0f);
         }
     }
 
@@ -91,15 +91,14 @@ public class OrderManager : MonoBehaviour
 
         currentOrder = new Order(Random.Range(minTime, maxTime), requiredItems);
         UpdateOrderText();
-        finalScore += score;
         Destroy(pick.transform.parent.gameObject);
-        UpdateScoreText();
-        Instantiate(pickPrefab, pickSpawnPoint.transform);
+        UpdateScoreText(score);
+        Instantiate(pickPrefab, pickSpawnPoint.transform.position, pickSpawnPoint.transform.rotation);
     }
 
     void UpdateOrderText()
     {
-        var text = orderText.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI text = orderText.GetComponent<TextMeshProUGUI>();
 
         string content = "Order\n";
         currentOrder.foods.Reverse();
@@ -112,13 +111,18 @@ public class OrderManager : MonoBehaviour
     }
     void UpdateTimeText()
     {
-        var text = timerText.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI text = timerText.GetComponent<TextMeshProUGUI>();
         text.SetText(((int)currentOrder.time).ToString());
     }
 
-    void UpdateScoreText()
+    void UpdateScoreText(float timeChange)
     {
-        var text = scoreText.GetComponent<TextMeshProUGUI>();
-        text.SetText(finalScore.ToString());
+        ScoreBoard score = scoreText.GetComponent<ScoreBoard>();
+        if (!score)
+        {
+            return;
+        }
+
+        score.currentTime += timeChange * 2.0f;
     }
 }

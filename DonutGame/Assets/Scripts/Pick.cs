@@ -75,6 +75,7 @@ public class Pick : MonoBehaviour
         other.GetComponent<SphereCollider>().enabled = false;
         var rb = other.GetComponent<Rigidbody>();
         float initialSpeed = CalculateInitialImpalingSpeed(rb.linearVelocity);
+        foodItem.PlayParticles();
         rb.isKinematic = true;
         foodItem.toDestroy = false;
         other.transform.SetParent(transform);

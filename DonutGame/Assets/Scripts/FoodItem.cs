@@ -10,6 +10,7 @@ public enum Food
 
 public class FoodItem : MonoBehaviour
 {
+    public GameObject particles = null;
     public int points = 0;
     public float lifeTime = 5f;
     public bool toDestroy = true;
@@ -32,7 +33,13 @@ public class FoodItem : MonoBehaviour
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
-            // Destroy(gameObject);
+            Destroy(gameObject);
         }
+    }
+
+    public void PlayParticles()
+    {
+        if (!particles) return;
+        Instantiate(particles, gameObject.transform.position, gameObject.transform.rotation);
     }
 }
