@@ -93,7 +93,7 @@ public class OrderManager : MonoBehaviour
         UpdateOrderText();
         Destroy(pick.transform.parent.gameObject);
         UpdateScoreText(score);
-        Instantiate(pickPrefab, pickSpawnPoint.transform);
+        Instantiate(pickPrefab, pickSpawnPoint.transform.position, pickSpawnPoint.transform.rotation);
     }
 
     void UpdateOrderText()

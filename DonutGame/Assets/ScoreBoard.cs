@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class ScoreBoard : MonoBehaviour
 {
+    private float fullTime = 0.0f;
     public float currentTime = 120.0f;
     private TextMeshProUGUI text;
+
+    public GameObject endMenu;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,10 +20,15 @@ public class ScoreBoard : MonoBehaviour
         if (currentTime > 0)
         {
             currentTime -= Time.deltaTime;
+            fullTime += Time.deltaTime;
             UpdateTimerDisplay();
         }
         else
         {
+            endMenu.SetActive(true);
+            int minutes = Mathf.FloorToInt(fullTime / 60f);
+            int seconds = Mathf.FloorToInt(fullTime % 60f);
+            endMenu.GetComponentInChildren<TextMeshProUGUI>().text = $"Nice Work!\n\n\n\n{minutes:00}:{seconds:00}";
         }
     }
 
