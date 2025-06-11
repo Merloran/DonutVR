@@ -25,6 +25,7 @@ public class ScoreBoard : MonoBehaviour
         }
         else
         {
+            currentTime = 0.0f;
             endMenu.SetActive(true);
             int minutes = Mathf.FloorToInt(fullTime / 60f);
             int seconds = Mathf.FloorToInt(fullTime % 60f);
