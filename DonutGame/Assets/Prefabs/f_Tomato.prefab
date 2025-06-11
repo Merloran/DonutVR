@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4316895117975343234}
   - component: {fileID: 7661483690500218479}
   - component: {fileID: 4365741289681850515}
+  - component: {fileID: 8201176910865935180}
   m_Layer: 0
   m_Name: f_Tomato
   m_TagString: Untagged
@@ -301,6 +302,23 @@ MonoBehaviour:
   lifeTime: 5
   toDestroy: 1
   type: 0
+--- !u!114 &8201176910865935180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809325107322782527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1dd9df94c824db42907c103d720c112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutItem: {fileID: 2119934290990713352, guid: b5543227a83c84b418735c6dc5533eb9, type: 3}
+  cutCount: 3
+  itemHeight: 0.5
+  cutSpacing: 0
+  cutAxis: {x: 0, y: 0, z: 0}
 --- !u!1001 &8237924810557753207
 PrefabInstance:
   m_ObjectHideFlags: 0

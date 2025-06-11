@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7766994166927555878}
   - component: {fileID: 394739141471079829}
   - component: {fileID: 5115728968958815184}
+  - component: {fileID: 3096895614367583894}
   m_Layer: 0
   m_Name: PickHandle
   m_TagString: Untagged
@@ -264,6 +265,21 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!114 &3096895614367583894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733307893419669215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53c949f4f54a6e459735fd8431ce71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetPoint: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 1, w: -0.00000004371139}
+  handle: {fileID: 0}
 --- !u!1 &5724724816187186621
 GameObject:
   m_ObjectHideFlags: 0

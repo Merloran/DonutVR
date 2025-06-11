@@ -32,7 +32,7 @@ public class FoodItem : MonoBehaviour
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
-            Destroy(gameObject);
+            // Destroy(gameObject);
         }
     }
 }
