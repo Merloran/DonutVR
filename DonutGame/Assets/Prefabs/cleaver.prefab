@@ -195,7 +195,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &7784208883195185087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,3 +365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53c949f4f54a6e459735fd8431ce71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetPoint: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  handle: {fileID: 0}
