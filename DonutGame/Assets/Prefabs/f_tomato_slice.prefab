@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d8aaaad3ba1ed5d4fb50f73a33bd4fd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.9519157
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8aaaad3ba1ed5d4fb50f73a33bd4fd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.017914057
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8aaaad3ba1ed5d4fb50f73a33bd4fd8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.947622
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8aaaad3ba1ed5d4fb50f73a33bd4fd8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -103,7 +103,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &4270622331052226736
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 605cb36e8e82d7341b9adce85eed1abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 0}
   points: 0
   lifeTime: 5
   toDestroy: 1
