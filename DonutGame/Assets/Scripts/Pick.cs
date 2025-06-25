@@ -12,12 +12,19 @@ public class Pick : MonoBehaviour
         public float currentImpalingSpeed;
         public float baseImpalingSpeed;
         public GameObject food;
+        public bool isSlidingOff;
+        public float slideProgress;
+        public float slideDuration;
+
         public FoodInfo(float progress, float speed, GameObject food)
         {
             impalingProgress = progress;
             baseImpalingSpeed = speed;
             currentImpalingSpeed = speed;
             this.food = food;
+            isSlidingOff = false;
+            slideProgress = 0f;
+            slideDuration = 1f;
         }
     }
 
@@ -38,23 +45,68 @@ public class Pick : MonoBehaviour
     void Update()
     {
         UpdateImpalingSpeed();
-        if (foodSlots.size < maxSlotsCount || foodSlots[maxSlotsCount - 1].impalingProgress < 1.0f)
+
+        float zRot = transform.eulerAngles.z;
+        float xRot = transform.eulerAngles.x;
+        bool shouldSlideOff = (zRot >= 140f && zRot <= 220f) && (xRot >= 320f || xRot <= 40f);
+
+        for (int i = 0; i < foodSlots.size; ++i)
         {
-            for (int i = 0; i < foodSlots.size; ++i)
+            var info = foodSlots[i];
+
+            if (info.isSlidingOff)
             {
-                if (foodSlots[i].impalingProgress >= 1.0f)
+                // Im ni¿szy index, tym d³u¿ej spada
+                float indexFactor = (float)(foodSlots.size - 1 - i) / Mathf.Max(1, foodSlots.size - 1); // 0 dla najwy¿szego, 1 dla najni¿szego
+                info.slideDuration = Mathf.Lerp(0.2f, 1.2f, indexFactor); // przyk³adowe czasy zsuwania
+
+                info.slideProgress += Time.deltaTime / info.slideDuration;
+                float slideT = Mathf.SmoothStep(0f, 1f, info.slideProgress);
+
+                Vector3 startPos = transform.position - transform.up * (1.0f - slotsOffset - slotsSpacing * i);
+                Vector3 endPos = startPos + transform.up * 0.3f; // ruch w górê w lokalnych, ale mo¿e trzeba -transform.up (patrz ni¿ej)
+
+                info.food.transform.position = Vector3.Lerp(startPos, endPos, slideT);
+
+                if (info.slideProgress >= 1f)
                 {
+                    // opcjonalnie: odpinanie i fizyka
+                    var rb = info.food.GetComponent<Rigidbody>();
+                    if (rb != null)
+                    {
+                        rb.isKinematic = false;
+                        rb.linearVelocity = Vector3.zero;
+                        info.food.transform.SetParent(null);
+                    }
+
+                    foodSlots.RemoveAt(i);
+                    --i;
                     continue;
                 }
 
-                foodSlots[i].food.transform.position = 
-                    Vector3.Lerp(transform.position,
-                                 transform.position - transform.up * (1.0f - slotsOffset - slotsSpacing * i),
-                                 Mathf.SmoothStep(0.0f, 1.0f, foodSlots[i].impalingProgress));
-
-                foodSlots[i].impalingProgress = Math.Min(foodSlots[i].impalingProgress + 
-                                                         foodSlots[i].currentImpalingSpeed * Time.deltaTime, 1.0f);
+                foodSlots[i] = info;
+                continue;
             }
+
+
+            if (info.impalingProgress < 1.0f)
+            {
+                float t = Mathf.Clamp01(info.impalingProgress); // zamiast SmoothStep
+                Vector3 endPos = transform.position - transform.up * (1.0f - slotsOffset - slotsSpacing * i);
+                info.food.transform.position = Vector3.Lerp(transform.position, endPos, t);
+
+                info.impalingProgress = Mathf.Min(info.impalingProgress +
+                                                  info.currentImpalingSpeed * Time.deltaTime, 1.0f);
+            }
+
+            if (shouldSlideOff && info.impalingProgress >= 1.0f)
+            {
+                info.isSlidingOff = true;
+                info.slideDuration = 0.5f + 0.3f * i;
+                info.slideProgress = 0f;
+            }
+
+            foodSlots[i] = info;
         }
     }
 

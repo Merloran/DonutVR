@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Cleaver : MonoBehaviour
 {
+    public GameObject timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +29,7 @@ public class Cleaver : MonoBehaviour
         Vector3 offset = itemTransform.up * (cuttable.cutSpacing + cuttable.itemHeight / cuttable.cutCount);
         Vector3 velocity = other.gameObject.GetComponent<Rigidbody>().linearVelocity;
         Vector3 angularVelocity = other.gameObject.GetComponent<Rigidbody>().angularVelocity;
+        timer.GetComponent<ScoreBoard>().currentTime += cuttable.timeToAdd;
         for (int i = 0; i < cuttable.cutCount; ++i)
         {
             GameObject spawned = Instantiate(cuttable.cutItem, bottom + offset * i, itemTransform.rotation);

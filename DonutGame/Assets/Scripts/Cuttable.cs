@@ -12,6 +12,7 @@ public class Cuttable : MonoBehaviour
     public float cutSpacing = 0;
     [SerializeField]
     public Vector3 cutAxis = Vector3.up;
+    public int timeToAdd = 3;
 
     void Start()
     {
