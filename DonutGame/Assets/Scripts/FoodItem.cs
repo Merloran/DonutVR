@@ -3,8 +3,13 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public enum Food
 {
+    pepper,
+    cucumber,
     tomato,
     steak,
+    cheese,
+    onion,
+    pineapple,
     junk
 };
 

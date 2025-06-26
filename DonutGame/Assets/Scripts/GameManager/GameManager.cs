@@ -1,4 +1,4 @@
-using UnityEditor.ShaderGraph.Internal;
+
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public GameObject hardButton;
     public GameObject startButton;
     public GameObject scoreBoardbutton;
+
+
+    public GameObject endMenu;
 
     public GameObject menu;
     private Vector3 knifeStartPos;
@@ -78,6 +81,10 @@ public class GameManager : MonoBehaviour
         StartGame();
     }
 
+    public void setEndLevel()
+    {
+
+    }
     public void chooseDifficulty()
     {
 

@@ -303,7 +303,7 @@ MonoBehaviour:
   points: 5
   lifeTime: 5
   toDestroy: 1
-  type: 0
+  type: 2
 --- !u!114 &8201176910865935180
 MonoBehaviour:
   m_ObjectHideFlags: 0

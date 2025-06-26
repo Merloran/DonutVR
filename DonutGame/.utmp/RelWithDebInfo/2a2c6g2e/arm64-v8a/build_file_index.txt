@@ -1,0 +1,2 @@
+D:\repozytoria\DonutVR\DonutGame\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\repozytoria\DonutVR\DonutGame\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

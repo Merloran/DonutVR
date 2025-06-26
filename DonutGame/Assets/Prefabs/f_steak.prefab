@@ -302,7 +302,7 @@ MonoBehaviour:
   points: 10
   lifeTime: 5
   toDestroy: 1
-  type: 1
+  type: 3
 --- !u!114 &-1934855938891117755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +320,7 @@ MonoBehaviour:
   itemHeight: 0
   cutSpacing: 0
   cutAxis: {x: 0, y: 1, z: 0}
+  timeToAdd: 3
 --- !u!1001 &2118906896941014389
 PrefabInstance:
   m_ObjectHideFlags: 0
