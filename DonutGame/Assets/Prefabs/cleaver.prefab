@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6ea0cc3606e7e544aaf5cdffa5c33e07, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b74b81eb5f4f1d47846a050ce4bd267, type: 2}
     - target: {fileID: 919132149155446097, guid: 6ea0cc3606e7e544aaf5cdffa5c33e07, type: 3}
       propertyPath: m_Name
       value: cleaver
@@ -353,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cce1afd3a4cd2b4ea0b6395f9d48040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 0}
 --- !u!114 &-7220346096887035289
 MonoBehaviour:
   m_ObjectHideFlags: 0
