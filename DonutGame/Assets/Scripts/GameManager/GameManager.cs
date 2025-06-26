@@ -84,6 +84,13 @@ public class GameManager : MonoBehaviour
         startButton.SetActive(true);
         scoreBoardbutton.SetActive(true);
 
+        ScoreBoard points = score.GetComponent<ScoreBoard>();
+        if (points)
+        {
+            points.currentTime = 120.0f;
+            points.fullTime = 0.0f;
+        }
+
         // Przywróæ pozycje
         knife.transform.position = knifeStartPos;
         knife.transform.rotation = knifeStartRot;
