@@ -60,6 +60,14 @@ public class Launcher : MonoBehaviour
         else
             StopAllCoroutines();
     }
+    public void ResetLauncher()
+    {
+        if (!activeLauncher || currentSettings == null)
+            return;
+
+        StopAllCoroutines();
+        StartCoroutine(LaunchFruit());
+    }
 
     public void setDifficulty(Difficulty level)
     {

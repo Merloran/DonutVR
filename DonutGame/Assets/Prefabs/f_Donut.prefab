@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7661483690500218479}
   - component: {fileID: 145714812431870656}
   - component: {fileID: 4263345513513319007}
+  - component: {fileID: -740229607326895497}
   m_Layer: 0
   m_Name: f_Donut
   m_TagString: Untagged
@@ -321,6 +322,19 @@ MonoBehaviour:
   cutSpacing: 0
   cutAxis: {x: 0, y: 0, z: 0}
   timeToAdd: 3
+--- !u!114 &-740229607326895497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809325107322782527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be7b645eb1493741ba2eb844ea81f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxEffectPrefab: {fileID: 4480519271395489076, guid: 7873a32f4e037774281f93bdbfec7499, type: 3}
 --- !u!1001 &7032994615621048664
 PrefabInstance:
   m_ObjectHideFlags: 0

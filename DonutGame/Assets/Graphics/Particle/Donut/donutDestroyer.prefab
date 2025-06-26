@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -4284258727847135909}
   - component: {fileID: -8162442301244030747}
   m_Layer: 0
-  m_Name: TomatoDestroy
+  m_Name: donutDestroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4480519271395489076}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: cd51841b30188aa4ca91f75a063c582d, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 39d29e9615297ef42bc78f3429c931ad, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0

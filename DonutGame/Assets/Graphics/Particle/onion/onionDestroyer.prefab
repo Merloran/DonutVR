@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -4284258727847135909}
   - component: {fileID: -8162442301244030747}
   m_Layer: 0
-  m_Name: TomatoDestroy
+  m_Name: onionDestroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
