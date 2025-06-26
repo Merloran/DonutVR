@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         ScoreBoard points = score.GetComponent<ScoreBoard>();
         if (points)
         {
-            points.currentTime = 120.0f;
+            points.currentTime = 180.0f;
             points.fullTime = 0.0f;
         }
 
